@@ -1,7 +1,8 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import {HYDRATE} from "next-redux-wrapper";
 
-import counter from './counter';       
+import counter from './counter';
+import user from "./user";
 
 const reducer= (state, action)=>{
     if(action.type == HYDRATE){
@@ -12,6 +13,7 @@ const reducer= (state, action)=>{
     }
     return combineReducers({
         counter,
+        user,
         // 여기에 추가 
     })(state, action);
 }
