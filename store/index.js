@@ -6,7 +6,7 @@ import logger from 'redux-logger';
 import reducer from './modules';
 
 const makeStore =(context)=>configureStore({
-    reducer,
+    reducer:reducer,
     middleware : (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
     devTools : process.env.NODE_ENV !='production',
 })
